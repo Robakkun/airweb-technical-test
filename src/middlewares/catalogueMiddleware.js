@@ -2,7 +2,7 @@ import {
     FETCH_INITIAL_PRODUCTS_LIST,
     FETCH_INITIAL_CATEGORIES_LIST,
     saveInitialProductsList,
-    saveInitialCategoriesList
+    fetchInitialProductsList
 } from '../actions/catalogue';
 
 import _ from 'lodash'
@@ -17,7 +17,18 @@ const catalogueMiddleware = (store) => (next) => async (action) => {
                     response.json()
                         .then(result => {
                             if (!_.isEmpty(result)) {
-                                store.dispatch(saveInitialProductsList(result));
+                                const products = _.map(result, product => {
+                                    const productCategory = _.find(action.categories, category => category.id === product.category_id);
+                                    return {
+                                        id: product.id,
+                                        label: product.label,
+                                        description: product.description,
+                                        price: product.price,
+                                        category: productCategory,
+                                        thumbnail_url: product.thumbnail_url
+                                    }
+                                })
+                                store.dispatch(saveInitialProductsList(products));
                             }
                         })
                 })
@@ -31,7 +42,8 @@ const catalogueMiddleware = (store) => (next) => async (action) => {
                     response.json()
                         .then(result => {
                             if (!_.isEmpty(result)) {
-                                store.dispatch(saveInitialCategoriesList(result));
+
+                                store.dispatch(fetchInitialProductsList(result));
                             }
                         })
                 })

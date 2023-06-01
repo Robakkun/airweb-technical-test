@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-import { SAVE_INITIAL_PRODUCTS_LIST, SAVE_INITIAL_CATEGORIES_LIST } from '../actions/catalogue';
+import { SAVE_INITIAL_PRODUCTS_LIST } from '../actions/catalogue';
 
 export const initialState = {
 };
@@ -11,14 +11,7 @@ const reducer = (state = initialState, action = {}) => {
         //Here we initiate the products list, retrieve by the middleware
         case SAVE_INITIAL_PRODUCTS_LIST:
             return {
-                ...state,
                 products: action.products
-            }
-
-        case SAVE_INITIAL_CATEGORIES_LIST:
-            return {
-                ...state,
-                categories: action.categories
             }
 
         default:

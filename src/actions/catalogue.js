@@ -2,10 +2,10 @@
 export const FETCH_INITIAL_PRODUCTS_LIST = 'FETCH_INITIAL_PRODUCTS_LIST';
 export const FETCH_INITIAL_CATEGORIES_LIST = 'FETCH_INITIAL_CATEGORIES_LIST';
 export const SAVE_INITIAL_PRODUCTS_LIST = 'SAVE_INITIAL_PRODUCTS_LIST';
-export const SAVE_INITIAL_CATEGORIES_LIST = 'SAVE_INITIAL_CATEGORIES_LIST';
 
-export const fetchInitialProductsList = () => ({
+export const fetchInitialProductsList = (categories) => ({
     type: FETCH_INITIAL_PRODUCTS_LIST,
+    categories: categories
 })
 
 export const fetchInitialCategoriesList = () => ({
@@ -15,10 +15,5 @@ export const fetchInitialCategoriesList = () => ({
 export const saveInitialProductsList = (products) => ({
     type: SAVE_INITIAL_PRODUCTS_LIST,
     products: products
-})
-
-export const saveInitialCategoriesList = (categories) => ({
-    type: SAVE_INITIAL_CATEGORIES_LIST,
-    categories: categories
 })
 
