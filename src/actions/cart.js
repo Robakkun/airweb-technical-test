@@ -2,7 +2,7 @@
 export const ADD_A_PRODUCT_TO_CART = 'ADD_A_PRODUCT_TO_CART';
 export const REMOVE_A_PRODUCT_FROM_CART = 'REMOVE_A_PRODUCT_FROM_CART';
 
-export const addProductToCart = (productId) => ({
+export const addProductToCart = (product) => ({
     type: ADD_A_PRODUCT_TO_CART,
     product
 })
