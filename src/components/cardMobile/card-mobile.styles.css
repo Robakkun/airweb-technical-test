@@ -14,14 +14,13 @@
     display: flex;
 }
 
-.cart-line {
+.cart_line_mobile {
     display: flex;
     flex-direction: column;
 }
 
-.price {
-    margin-top: 20px;
-    margin-bottom: 60px;
+.price_mobile {
+    margin: 20px 5px 60px 5px;
     padding-left: 5px;
     width: 50px;
     border-radius: 5px;

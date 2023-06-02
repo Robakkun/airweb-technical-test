@@ -14,14 +14,13 @@
     display: flex;
 }
 
-.cart-line {
+.cart_line {
     display: flex;
     flex-direction: row;
 }
 
 .price {
-    margin-top: 6px;
-    margin-right: 70px;
+    margin: 6px 70px 0px 0px;
     padding-left: 5px;
     width: 50px;
     height: 26px;

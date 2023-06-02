@@ -46,7 +46,7 @@ const ProductCard = ({ product }) => {
                         <Typography data-testid='description' gutterBottom variant="body2">
                             {product.description}
                         </Typography>
-                        <div className='cart-line'>
+                        <div className='cart_line'>
                             <div className='price'>
                                 <Typography data-testid='price' variant="body1">
                                     {`${product.price} €`}

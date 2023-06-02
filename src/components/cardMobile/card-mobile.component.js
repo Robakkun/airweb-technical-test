@@ -47,8 +47,8 @@ const ProductCardMobile = ({ product }) => {
                             {product.description}
                         </Typography>
                     </CardContent>
-                    <div className='cart-line'>
-                        <div className='price'>
+                    <div className='cart_line_mobile'>
+                        <div className='price_mobile'>
                             <Typography data-testid='price' variant="body1">
                                 {`${product.price} €`}
                             </Typography>
