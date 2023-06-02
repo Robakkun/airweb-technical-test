@@ -2,7 +2,7 @@
     text-align: left;
     display: flex;
     flex-direction: column;
-    width: 400px;
+    max-width: 430px;
 }
 
 .avatar {
@@ -20,9 +20,8 @@
 }
 
 .price {
-    margin: 6px 70px 0px 0px;
-    padding-left: 5px;
-    width: 50px;
+    margin: 6px auto 0px 0px;
+    width: auto;
     height: 26px;
     border-radius: 5px;
     background-color: lightgray;

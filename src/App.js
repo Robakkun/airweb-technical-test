@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import logo from './media/logo.png';
 import './App.css';
-import Card from './components/cardMobile';
 
 import { Provider } from 'react-redux';
 import store from './store'
 import ShoppingCartIcon from './components/shoppingCartIcon';
+import Catalogue from './views/catalogue';
 
 function App() {
   return (
@@ -28,7 +28,7 @@ function App() {
             <Route
               exact
               path='/catalogue'
-              element={<div>Catalogue</div>}
+              element={<Catalogue />}
             />
             <Route
               exact

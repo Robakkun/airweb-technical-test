@@ -1,9 +1,6 @@
-.App {
-  text-align: center;
-}
-
 .App-header {
   display: flex;
+  margin-bottom: 50px;
 }
 
 .logo {
