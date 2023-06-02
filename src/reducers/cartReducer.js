@@ -11,7 +11,7 @@ const reducer = (state = initialState, action = {}) => {
     switch (action.type) {
         //Update the store by adding the selected product when the user clicks on the addToCart button
         case ADD_A_PRODUCT_TO_CART:
-            const cartList = state.cartList;
+            const cartList = [...state.cartList];
             cartList.push(action.product);
 
             return {
