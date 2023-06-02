@@ -1,0 +1,1 @@
+export { default } from './shopping-cart-icon.component'

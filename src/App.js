@@ -1,34 +1,44 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import logo from './media/logo.png';
 import './App.css';
+import Card from './components/cardMobile';
+
+import { Provider } from 'react-redux';
+import store from './store'
+import ShoppingCartIcon from './components/shoppingCartIcon';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
-      <Router>
-        <Routes>
-          <Route
-            exact
-            path='/'
-          >
-            <Redirect to="/catalogue" />
-          </Route>
-          <Route
-            exact
-            path='/catalogue'
-            element={<div>Catalogue</div>}
-          />
-          <Route
-            exact
-            path='/cart'
-            element={<div>Cart</div>}
-          />
-        </Routes>
-      </Router>
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <header className="App-header">
+          <div className='logo'>
+            <img src={logo} height={30} width={100}></img>
+          </div>
+          <ShoppingCartIcon />
+        </header>
+        <Router>
+          <Routes>
+            <Route
+              exact
+              path='/'
+              element={<Navigate to="/catalogue" replace />}
+            >
+            </Route>
+            <Route
+              exact
+              path='/catalogue'
+              element={<div>Catalogue</div>}
+            />
+            <Route
+              exact
+              path='/cart'
+              element={<div>Cart</div>}
+            />
+          </Routes>
+        </Router>
+      </div>
+    </Provider>
   );
 }
 
