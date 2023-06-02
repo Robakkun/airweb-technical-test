@@ -2,7 +2,9 @@ import _ from 'lodash';
 
 import { ADD_A_PRODUCT_TO_CART, REMOVE_A_PRODUCT_FROM_CART } from '../actions/cart';
 
-export const initialState = {};
+export const initialState = {
+    cartList: []
+};
 
 //Function that will modify the store according to an action
 const reducer = (state = initialState, action = {}) => {

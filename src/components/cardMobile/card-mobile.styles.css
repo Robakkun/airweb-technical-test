@@ -1,0 +1,29 @@
+.card {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+}
+
+.cart-line {
+    display: flex;
+    flex-direction: column;
+}
+
+.price {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    padding-left: 5px;
+    width: 50px;
+    border-radius: 5px;
+    background-color: lightgray;
+}

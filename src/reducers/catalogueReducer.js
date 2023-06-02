@@ -3,6 +3,7 @@ import _ from 'lodash';
 import { SAVE_INITIAL_PRODUCTS_LIST } from '../actions/catalogue';
 
 export const initialState = {
+    products: []
 };
 
 //Function that will modify the store according to an action
