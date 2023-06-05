@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-import { ADD_A_PRODUCT_TO_CART, REMOVE_A_PRODUCT_FROM_CART } from '../actions/cart';
+import { ADD_A_PRODUCT_TO_CART, REMOVE_A_PRODUCT_FROM_CART, RESET_CART } from '../actions/cart';
 
 export const initialState = {
     cartList: []
@@ -22,6 +22,11 @@ const reducer = (state = initialState, action = {}) => {
         case REMOVE_A_PRODUCT_FROM_CART:
             return {
                 cartList: _.reject(state.cartList, product => product.id === action.productId)
+            }
+
+        case RESET_CART:
+            return {
+                cartList: []
             }
 
         default:

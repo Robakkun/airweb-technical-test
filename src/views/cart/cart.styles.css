@@ -10,3 +10,8 @@
 .cart_price {
     background-color: lightgray;
 }
+
+.cart_button {
+    margin-top: 15px;
+    text-align: right;
+}

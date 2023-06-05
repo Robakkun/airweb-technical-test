@@ -55,17 +55,21 @@ const Cart = () => {
         navigate(routes.Catalogue);
     }
 
+    const navigateToPayment = () => {
+        navigate(routes.Payment);
+    }
+
     return (
         <div className="cart_container">
             <div className="cart_title">
                 <ArrowBackIcon onClick={() => returnToCatalogue()} />
                 <CartIcon style={{ color: blue[500] }} />
-                Your cart
+                Votre panier
             </div>
             <Divider />
             {_.isEmpty(productsInCartList) &&
                 <div>
-                    There is no product in your cart
+                    Il n'y a aucun produit dans votre panier
                 </div>
             }
             {!_.isEmpty(productsInCartList) &&
@@ -73,7 +77,11 @@ const Cart = () => {
 
                     <div>{getCartList()}</div>
                     <div>{getTotal()}</div>
-                    <Button />
+                    <div className="cart_button">
+                        <Button size="small" variant="contained" onClick={() => navigateToPayment()}>
+                            Accéder au paiement
+                        </Button>
+                    </div>
                 </>
             }
         </div>

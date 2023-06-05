@@ -7,6 +7,7 @@ import store from './store'
 import ShoppingCartIcon from './components/shoppingCartIcon';
 import Catalogue from './views/catalogue';
 import Cart from './views/cart';
+import Payment from './views/payment';
 import Error404 from './views/error404';
 
 import routes from './constants/routes';
@@ -39,6 +40,11 @@ function App() {
                 exact
                 path={routes.Cart}
                 element={<Cart />}
+              />
+              <Route
+                exact
+                path={routes.Payment}
+                element={<Payment />}
               />
               <Route
                 exact
