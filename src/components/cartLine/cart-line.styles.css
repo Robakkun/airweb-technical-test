@@ -1,0 +1,13 @@
+.cart_line {
+    display: flex;
+}
+
+.cart_line_label {
+    margin: 5px auto 5px 5px;
+    width: 300px;
+}
+
+.cart_line_price {
+    margin: 5px 5px 5px 0px;
+    width: auto;
+}
