@@ -5,7 +5,7 @@ import {
     fetchInitialProductsList
 } from '../actions/catalogue';
 
-import _ from 'lodash'
+import _, { isEmpty } from 'lodash'
 
 //Function of store that get caught before reducers process. This is used to do async process like calling an API to generate or update the store
 const catalogueMiddleware = (store) => (next) => async (action) => {
@@ -16,7 +16,9 @@ const catalogueMiddleware = (store) => (next) => async (action) => {
                 .then(response => {
                     response.json()
                         .then(result => {
-                            if (!_.isEmpty(result)) {
+                            //Thanks to the settings in my store and the succession of methods calling the API, 
+                            //here I use the categories I retrieve from the action object to merge the data together.
+                            if (!_.isEmpty(result) && !_.isEmpty(action.categories)) {
                                 const products = _.map(result, product => {
                                     const productCategory = _.find(action.categories, category => category.id === product.category_id);
                                     return {
@@ -42,7 +44,7 @@ const catalogueMiddleware = (store) => (next) => async (action) => {
                     response.json()
                         .then(result => {
                             if (!_.isEmpty(result)) {
-
+                                //To simplify data retrieval, I call the second function here
                                 store.dispatch(fetchInitialProductsList(result));
                             }
                         })

@@ -9,6 +9,7 @@ import { blue } from '@mui/material/colors';
 import './shopping-cart-icon.styles.css';
 import routes from '../../constants/routes';
 
+//Component that use store to display cart icon and the number of items in cart in app's header
 const ShoppingCartIcon = () => {
     const cartListState = useSelector((state) => state.cartReducer.cartList);
     const [cartCount, setCartCount] = useState(0);

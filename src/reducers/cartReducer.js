@@ -24,6 +24,7 @@ const reducer = (state = initialState, action = {}) => {
                 cartList: _.reject(state.cartList, product => product.id === action.productId)
             }
 
+        //Update the store by cleaning the cartList array
         case RESET_CART:
             return {
                 cartList: []

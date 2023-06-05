@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import './error404.styles.css'
 
 const error404 = () => {
-    // This hook allow the navigation to other url
     const navigate = useNavigate();
 
     const returnToHome = () => {

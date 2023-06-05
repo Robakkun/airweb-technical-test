@@ -10,6 +10,7 @@ import { addProductToCart } from '../../actions/cart';
 
 import './card-mobile.styles.css';
 
+//Card component for mobile display
 const ProductCardMobile = ({ product }) => {
     const dispatch = useDispatch();
 

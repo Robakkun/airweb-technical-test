@@ -10,6 +10,7 @@ import { addProductToCart } from '../../actions/cart';
 
 import './card.styles.css';
 
+//Card component for desktop display
 const ProductCard = ({ product }) => {
     const dispatch = useDispatch();
 

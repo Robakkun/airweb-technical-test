@@ -24,6 +24,7 @@ const Cart = () => {
         }
     }, [cartState])
 
+    //Function that create a list of lines for each products in cart to display them in the view
     const getCartList = () => {
         let uniqueKey = 0;
         return _.map(productsInCartList, product => {
@@ -74,7 +75,6 @@ const Cart = () => {
             }
             {!_.isEmpty(productsInCartList) &&
                 <>
-
                     <div>{getCartList()}</div>
                     <div>{getTotal()}</div>
                     <div className="cart_button">
