@@ -1,0 +1,12 @@
+.cart_container {
+    align-items: center;
+}
+
+.cart_title {
+    display: flex;
+    flex-direction: row;
+}
+
+.cart_price {
+    background-color: lightgray;
+}
